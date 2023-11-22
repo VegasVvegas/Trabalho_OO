@@ -1,12 +1,22 @@
 package entities;
 
+import java.util.ArrayList;
+
 public class Spotify {
-	private  Arraylist usuarios;
-	private  Arraylist artistas;
-	private  Arraylist musicas;
-	private  Arraylist playlists;
-	private  Arraylist albuns;
+	private  ArrayList<Usuario> usuarios;
+	private  ArrayList<Artista> artistas;
+	private  ArrayList<Musica> musicas;
+	private  ArrayList<Playlist> playlists;
+	private  ArrayList<Album> albuns;
 	
+	public Spotify (
+			ArrayList<Usuario> usuarios,
+			ArrayList<Artista> artistas,
+			ArrayList<Musica> musicas,
+			ArrayList<Playlist> playlists,
+			ArrayList<Album> albuns){
+		this.usuarios = new ArrayList<>(); 
+	}
 	
 	public void cadastrarPessoa(String nome,String dataNascimento, String email, String senha) {	
 	}
@@ -14,10 +24,31 @@ public class Spotify {
 	}
 	public void editarPessoa(String nome,String dataNascimento, String email, String senha) {	
 	}
-	public String buscarMusica(String tituloMusica) {	
+	public ArrayList<Usuario> getUsuario(){
+		return usuarios;
 	}
-	public String buscarAlbum(String tituloAlbum) {	
+	public ArrayList<Artista> getArtista(){
+		return artistas;
 	}
-	public String buscarArtista(String nome) {	
+	public ArrayList<Musica> getMusica(){
+		return musicas;
+	}
+	public ArrayList<Playlist> getPlaylist(){
+		return playlists;
+	}
+	public ArrayList<Album> getAlbum(){
+		return albuns;
+	}
+	public ArrayList<Musica> pesquisaMusica() {
+        return musicas;
+    }	
+	public ArrayList<Artista> pesquisaArtistas(){
+		return artistas;
+	}
+	public ArrayList<Album> pesquisaAlbuns(){
+		return albuns;
+	}
+	public ArrayList<Playlist> pesquisaPlaylists(){
+		return playlists;
 	}
 }
