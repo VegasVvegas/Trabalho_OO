@@ -50,7 +50,7 @@ public class Album {
 	}
 	public void compartilharAlbum(String tituloAlbum) {
 	}
-	public ArrayList<Musica> vizualizarAlbum() {
+	public String vizualizarAlbum() {
 		return musicas;
 	}
 }

@@ -1,5 +1,8 @@
 package entities;
 public class Playlist {
+	
+	
+	
 	private String nomePlaylist;
 	private String proprietario;
 	private String musicas;
@@ -8,13 +11,15 @@ public class Playlist {
 	public Playlist(String nomePlaylist, String proprietario,
 			        String duracaoPlaylist,
 			        String musicas) {
-		super();
 		this.nomePlaylist = nomePlaylist;
 		this.proprietario = proprietario;
 		this.duracaoPlaylist = duracaoPlaylist;
 		this.musicas = musicas;
 	}
 	
+	public Playlist(String nomePlaylist) {
+		this.nomePlaylist = nomePlaylist;
+	}
 	
 	public String getNomePlaylist() {
 		return nomePlaylist;
@@ -33,10 +38,8 @@ public class Playlist {
 	}
 	
 	public void adicionarMusica(String tituloMusica) {
-		
 	}
-	public void aleatorizar() {
-	}
+	
 	public void editarPlaylist(String nomePlaylist, String tituloMusica) {
 	}
 }
