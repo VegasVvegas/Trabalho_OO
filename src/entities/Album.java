@@ -1,11 +1,9 @@
 package entities;
-
 import java.util.ArrayList;
-
 public class Album {
 	private String anoLancamento;
 	private String tituloAlbum;
-	private ArrayList<Musica> musicas = new ArrayList<Musica>();
+	private String musicas;
 	private String artista;
 	private String genero;
 	
@@ -13,7 +11,7 @@ public class Album {
 				String tituloAlbum,
 				String artista,
 				String genero,
-				ArrayList<Musica> musicas) {
+				String musicas) {
 		this.anoLancamento = anoLancamento;
 		this.tituloAlbum = tituloAlbum;
 		this.artista = artista;
