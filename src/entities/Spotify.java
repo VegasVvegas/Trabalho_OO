@@ -1,4 +1,4 @@
-package Spotify;
+package entities;
 
 public class Spotify {
 	private Usuario[] usuario;
@@ -54,7 +54,7 @@ public class Spotify {
 		this.nUsuarios = nUsuarios;
 	}
 
-	public Artista[] getnArtistas() {
+	public Artista[] getnArtista() {
 		return artistas;
 	}
 	
@@ -71,7 +71,7 @@ public class Spotify {
 	}
 
 
-	public void setnArtistas(Artista[] artistas) {
+	public void setnArtista(Artista[] artistas) {
 		this.artistas = artistas;
 	}
 	
@@ -84,7 +84,6 @@ public class Spotify {
 	}
 
 
-
 	public void setnArtistas(int nArtistas) {
 		this.nArtistas = nArtistas;
 	}
@@ -93,10 +92,10 @@ public class Spotify {
 		return musicas;
 	}
 	
-	public Musica getMusica(int i) {
+	public Musica getMusicas(int i) {
 		return musicas[i];
 	}
-	public String[] getMusica() {
+	public String[] getNomeMusica() {
 		String[] s = new String[nMusicas];
 		for(int i = 0; i < nMusicas; i++) {
 			s[i] = musicas[i].getNome();
@@ -108,7 +107,7 @@ public class Spotify {
 		this.musicas = musicas;
 	}
 	
-	public void setMusica(int i, Musica u) {
+	public void setMusicas(int i, Musica u) {
 		musicas[i] = u;
 	}
 	
@@ -124,26 +123,20 @@ public class Spotify {
 		return playlist;
 	}
 	
-	public Playlist getPlaylist(int i) {
+	public Playlist getPlaylists(int i) {
 		return playlist[i];
 	}
-	public String[] getNomeUsuarios() {
-		String[] s = new String[nUsuarios];
-		for(int i = 0; i < nUsuarios; i++) {
-			s[i] = usuario[i].getNome();
-		}
-		return s;
 
 	public void setPlaylist(Playlist[] playlist) {
 		this.playlist = playlist;
 	}
 	
-	public void setPlaylist(int i, Playlist p) {
+	public void setPlaylists(int i, Playlist p) {
 		playlist[i] = p;
 	}
 
 
-	public String[] getPlaylist() {
+	public String[] getNomePlaylist() {
 		String[] s = new String[nPlaylist];
 		for(int i = 0; i < nPlaylist; i++) {
 			s[i] = playlist[i].getNome();
@@ -155,7 +148,6 @@ public class Spotify {
 	public int getnPlaylist() {
 		return nPlaylist;
 	}
-
 
 
 	public void setnPlaylist(int nPlaylist) {
@@ -170,7 +162,7 @@ public class Spotify {
 		return albuns[i];
 	}
 
-	public String[] getAlbuns() {
+	public String[] getNomeAlbuns() {
 		String[] s = new String[nAlbuns];
 		for(int i = 0; i < nAlbuns; i++) {
 			s[i] = albuns[i].getNome();
@@ -182,15 +174,15 @@ public class Spotify {
 		this.albuns = albuns;
 	}
 	
-	public void setAlbuns(int i, Album o) {
+	public void setAlbum(int i, Album o) {
 		albuns[i] = o;
 	}
 
-	public int getnUsuarios() {
+	public int getnAlbuns() {
 		return nAlbuns;
 	}
 
-	public void setnUsuarios(int nAlbuns) {
+	public void setnAlbuns(int nAlbuns) {
 		this.nAlbuns = nAlbuns;
 	}
 
