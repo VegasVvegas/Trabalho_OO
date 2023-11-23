@@ -41,5 +41,16 @@ public class Playlist {
 	}
 	
 	public void editarPlaylist(String nomePlaylist, String tituloMusica) {
+	    if (this.nomePlaylist.equals(nomePlaylist)) {
+	        for (Musica musica : musicas) {
+	            if (musica.getTituloMusica().equals(tituloMusica)) {
+	                // Atualize o nome da música aqui
+	                musica.setTituloMusica("Novo Título");
+	                // Atualize a duração da playlist aqui
+	                this.duracaoPlaylist = musica.getDuracao();
+	                break;
+	            }
+	        }
+	    }
 	}
 }
