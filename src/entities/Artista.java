@@ -1,5 +1,4 @@
 package entities;
-import java.util.ArrayList;
 import java.util.Date;
 public class Artista extends Pessoa {
 	private Album[]albuns;
