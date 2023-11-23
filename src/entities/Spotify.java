@@ -202,6 +202,7 @@ public class Spotify {
 						"musicas".concat(s),"duracaoPlaylis".concat(s));
 				albuns[i] = new Album("Album".concat(s), "anoLancamento".concat(s), 
 						"musicas".concat(s),"artista".concat(s), "genero".concat(s));
+				artistas[i].adicionarMusica(new Album(artistas[i], "musica".concat(s), i, "tituloAlbum".concat(s) ));	
 				
 			nUsuarios = nArtistas = nMusicas = 10;
 		}
