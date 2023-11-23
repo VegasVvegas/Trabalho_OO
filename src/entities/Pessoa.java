@@ -1,14 +1,12 @@
 package entities;
 
-import java.util.Date;
-
 public abstract class Pessoa {
-	private String nome;
-	private Date dataNascimento;
-	private String email;
-	private String senha;
+	protected String nome;
+	protected String dataNascimento;
+	protected String email;
+	protected String senha;
 	
-	public Pessoa(String nome, Date dataNascimento, String email, String senha) {
+	public Pessoa(String nome, String dataNascimento, String email, String senha) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
@@ -21,10 +19,10 @@ public abstract class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getEmail() {
