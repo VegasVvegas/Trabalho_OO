@@ -37,12 +37,13 @@ public void setSobre(String sobre) {
 	this.sobre = sobre;
 }
 
+	public void adicionarAlbum(String tituloAlbum, String genero) {
+    		Album novoAlbum = new Album(tituloAlbum, genero)
+    	}
 
-	public void adicionarAlbum(String tituloAlbum, String tituloMusica, String genero) {	
-	
-	}
-	public void adicionarMusica(String tituloAlbum, String tituloMusica, String genero) {	
-	}
+    public void adicionarMusica(String tituloAlbum, String tituloMusica, String genero) {
+        Musica novaMusica = new Musica(tituloMusica, genero);
+    }
 	public void deletarAlbum(String tituloAlbum, String tituloMusica, String genero) {	
 	}
 	public void deletarMusica(String tituloAlbum, String tituloMusica, String genero) {	
