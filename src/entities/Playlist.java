@@ -1,16 +1,13 @@
 package entities;
-
-import java.util.ArrayList;
-
 public class Playlist {
 	private String nomePlaylist;
 	private String proprietario;
-	private ArrayList<Musica> musicas = new ArrayList<Musica>();
-	private int duracaoPlaylist;
+	private String musicas;
+	private String duracaoPlaylist;
 	
 	public Playlist(String nomePlaylist, String proprietario,
-			        int duracaoPlaylist,
-			        ArrayList<Musica> musicas) {
+			        String duracaoPlaylist,
+			        String musicas) {
 		super();
 		this.nomePlaylist = nomePlaylist;
 		this.proprietario = proprietario;
@@ -31,11 +28,12 @@ public class Playlist {
 	public void setProprietario(String proprietario) {
 		this.proprietario = proprietario;
 	}
-	public int getDuracaoPlaylist() {
+	public String getDuraçãoPlaylist() {
 		return duracaoPlaylist;
 	}
 	
 	public void adicionarMusica(String tituloMusica) {
+		
 	}
 	public void aleatorizar() {
 	}
