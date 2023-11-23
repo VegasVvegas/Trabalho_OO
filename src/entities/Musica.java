@@ -3,10 +3,10 @@ package entities;
 public class Musica {
 	private String tituloMusica;
 	private String artista;
-	private int duracao;
+	private String duracao;
 	private String album;
 	
-	public Musica(String tituloMusica, String artista, int duracao, String album) {
+	public Musica(String tituloMusica, String artista, String duracao, String album) {
 		this.tituloMusica = tituloMusica;
 		this.artista = artista;
 		this.duracao = duracao;
@@ -24,10 +24,10 @@ public class Musica {
 	public void setArtista(String artista) {
 		this.artista = artista;
 	}
-	public int getDuracao() {
+	public String getDuracao() {
 		return duracao;
 	}
-	public void setDuracao(int duracao) {
+	public void setDuracao(String duracao) {
 		this.duracao = duracao;
 	}
 	public String getAlbum() {
@@ -37,10 +37,10 @@ public class Musica {
 		this.album = album;
 	}
 	
-	public boolean pausarMusica( String tituloMusica, int duracao) {
+	public boolean pausarMusica( String tituloMusica, String duracao) {
 		return true;
 	}
-	public boolean avancarMusica( String tituloMusica, int duracao) {
+	public boolean avancarMusica( String tituloMusica, String duracao) {
 		return true;
 	}
 	public boolean repetirMusica( String tituloMusica) {
