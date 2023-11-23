@@ -198,12 +198,11 @@ public class Spotify {
 			artistas[i] = new Artista("Artista".concat(s), "dataNascimento".concat(s), "email".concat(s), 
 					"senha".concat(s),"albuns".concat(s), "musicas".concat(s), "seguidores".concat(s),"sob".concat(s));
 			musicas[i] = new Musica("Musica".concat(s), "artista".concat(s),"duracao".concat(s), "album".concat(s));
-			playlist[i] = new Playlist("Playlist".concat(s), "".concat(s), "proprietario".concat(s), 
+			playlist[i] = new Playlist("Playlist".concat(s), "proprietario".concat(s), 
 					"musicas".concat(s),"duracaoPlaylis".concat(s));
-			albuns[i] = new Album("Album".concat(s), "anoLancamento".concat(s), "tituloAlbum".concat(s), 
+			albuns[i] = new Album("Album".concat(s), "anoLancamento".concat(s), 
 					"musicas".concat(s),"artista".concat(s), "genero".concat(s));
-			artistas[i].adicionarMusica(new Playlist(usuario[i], "hoje", i, "turma".concat(s) ));			
-		}
+			
 		nUsuarios = nArtistas = nMusicas = 10;
 	}
 
