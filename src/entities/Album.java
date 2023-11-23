@@ -1,5 +1,4 @@
 package entities;
-import java.util.ArrayList;
 public class Album {
 	private String anoLancamento;
 	private String tituloAlbum;
