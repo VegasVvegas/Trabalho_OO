@@ -47,7 +47,8 @@ public class Spotify {
 	}
 
 	public int getnUsuarios() {
-		return nUsuarios;
+		String[] nome = getNomeUsuarios();
+		return nome.length;
 	}
 
 	public void setnUsuarios(int nUsuarios) {
@@ -80,7 +81,8 @@ public class Spotify {
 	}
 
 	public int getnArtistas() {
-		return nArtistas;
+		String[] nome = getNomeArtistas();
+		return nome.length;
 	}
 
 
@@ -98,7 +100,7 @@ public class Spotify {
 	public String[] getNomeMusica() {
 		String[] s = new String[nMusicas];
 		for(int i = 0; i < nMusicas; i++) {
-			s[i] = musicas[i].getNome();
+			s[i] = musicas[i].getTituloMusica();
 		}
 		return s;
 	}
@@ -124,7 +126,8 @@ public class Spotify {
 	}
 	
 	public Playlist getPlaylists(int i) {
-		return playlist[i];
+		String[] nomePlaylist = getNomePlaylist();
+		return nomePlaylist.length;
 	}
 
 	public void setPlaylist(Playlist[] playlist) {
@@ -139,7 +142,7 @@ public class Spotify {
 	public String[] getNomePlaylist() {
 		String[] s = new String[nPlaylist];
 		for(int i = 0; i < nPlaylist; i++) {
-			s[i] = playlist[i].getNome();
+			s[i] = playlist[i].getNomePlaylist();
 		}
 		return s;
 	}
@@ -154,23 +157,23 @@ public class Spotify {
 		this.nPlaylist = nPlaylist;
 	}
 
-	public Usuario[] getAlbuns() {
+	public Album[] getAlbuns() {
 		return albuns;
 	}
 	
-	public Usuario getnAlbuns(int i) {
+	public Album getnAlbuns(int i) {
 		return albuns[i];
 	}
 
 	public String[] getNomeAlbuns() {
 		String[] s = new String[nAlbuns];
 		for(int i = 0; i < nAlbuns; i++) {
-			s[i] = albuns[i].getNome();
+			s[i] = albuns[i].getTituloAlbum();
 		}
 		return s;
 	}
 	
-	public void setAlbuns(Usuario[] albuns) {
+	public void setAlbuns(Album[] albuns) {
 		this.albuns = albuns;
 	}
 	
@@ -179,15 +182,14 @@ public class Spotify {
 	}
 
 	public int getnAlbuns() {
-		return nAlbuns;
+		String[] tituloAlbum = getNomeAlbuns();
+		return tituloAlbum.length;
 	}
 
 	public void setnAlbuns(int nAlbuns) {
 		this.nAlbuns = nAlbuns;
 	}
 
-
-{
 	public void preencherDados() {
 		for(int i = 0; i < 10; i++) {
 			String s = String.valueOf(i);
@@ -196,7 +198,7 @@ public class Spotify {
 			artistas[i] = new Artista("Artista".concat(s), "dataNascimento".concat(s), "email".concat(s), 
 					"senha".concat(s),"albuns".concat(s), "musicas".concat(s), "seguidores".concat(s),"sob".concat(s));
 			musicas[i] = new Musica("Musica".concat(s), "artista".concat(s),"duracao".concat(s), "album".concat(s));
-			musicas[i].adicionarMusica(new Playlist(usuario[i], "hoje", i, "turma".concat(s) ));			
+			artistas[i].adicionarMusica(new Playlist(usuario[i], "hoje", i, "turma".concat(s) ));			
 		}
 		nUsuarios = nArtistas = nMusicas = 10;
 	}
